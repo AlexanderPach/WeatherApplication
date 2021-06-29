@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ - FXML file for IST 146 Weather App Project. You should not have to modify this
+ - file to complete the project.
+-->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.LineChart?>
+<BorderPane fx:controller="WeatherController"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <ComboBox fx:id="states" visibleRowCount="5" onAction="#stateSelected"></ComboBox>
+            <ComboBox fx:id="counties" visibleRowCount="5"></ComboBox>
+            <Label fx:id="monthLabel" text="Select date:"></Label>
+            <DatePicker fx:id="startDate"></DatePicker>
+        </HBox>
+    </top>
+
+    <center>
+        <LineChart fx:id="chart" >
+            <xAxis>
+                <NumberAxis side="BOTTOM" label="Report"></NumberAxis>
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" label="Degrees Fahrenheit"></NumberAxis>
+            </yAxis>
+        </LineChart>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="fetchButton" text="Fetch" onAction="#fetchData"/>
+        </HBox>
+    </bottom>
+</BorderPane>
