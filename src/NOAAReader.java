@@ -11,7 +11,7 @@ import java.time.LocalDate;
  * Climate Data Online (CDO) site. Provided with the correct data, the static getTmaxData()
  * method will return a JSON object with a month's worth of maximum temperature data.
  *
- * DO NOT MODIFY THIS CLASS.
+ * 
  *
  */
 public class NOAAReader {
@@ -22,7 +22,6 @@ public class NOAAReader {
     private static final String BASE_URL = "https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&datatypeid=TMAX&";
 
     /**
-     * Given a LocalDate, return a String version.
      *
      * @param ld LocalDate object.
      *
@@ -35,8 +34,7 @@ public class NOAAReader {
     }
 
     /**
-     * Get a JSON object from the NOAA CDO stie, containing daily maximum temperatures, based on these parameters.
-     *
+     * 
      * @param token     Access token. Request a token online.
      * @param FIPS      Federal Information Processing Standards (FIPS) code for the desired county.
      * @param startDate LocalDate within the month to fetch data for.
@@ -92,7 +90,7 @@ public class NOAAReader {
                     e.getMessage() + "\"}");
         }
 
-        // if there was no data from NOAA, send back an
+       
         // error JSON object
         if (json.equals("{}")) {
             json = "{\"error\":\"empty JSON object\"}";
