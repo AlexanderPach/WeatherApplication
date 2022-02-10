@@ -125,7 +125,6 @@ public class WeatherModel {
     }
 
     /**
-     * Given a state and county name, return the corresponding Federal Information Processing Standards (FIPS) code.
      *
      * @param state Name of state.
      *
@@ -167,9 +166,6 @@ public class WeatherModel {
     }
 
     /**
-     * Query the NOAA CDO site for the specified temperatures. This method should
-     * be called by the controller. Once data is fetched, the method calls either
-     * the plot() or showError() method of the controller.
      *
      * @param state Name of the state to get data for.
      *
