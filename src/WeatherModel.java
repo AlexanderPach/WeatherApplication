@@ -42,7 +42,7 @@ public class WeatherModel {
      * @param controller WeatherController for the app.
      */
     public WeatherModel(WeatherController controller) {
-        // save reference to the controller; DO NOT REMOVE THIS LINE OF CODE
+        // save reference to the controller
         this.controller = controller;
 
 
